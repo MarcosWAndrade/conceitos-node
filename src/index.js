@@ -85,7 +85,7 @@ app.put('/todos/:id', checksExistsUserAccount, (request, response) => {
   }
 
 
-  todo.tilte = title;
+  todo.title = title;
   todo.deadLine = new Date(deadLine);
 
   return response.json(todo);
@@ -102,7 +102,7 @@ app.patch('/todos/:id/done', checksExistsUserAccount, (request, response) => {
       return response.status(404).json({ error: "todo nao encontrado" });
   }
 
-    todo.done = true
+    todo.done = true;
 
     return response.json(todo);
 });
